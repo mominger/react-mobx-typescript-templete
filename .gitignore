@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/dist/
+deploy_versions/
+.temp/
+.rn_temp/
+.history/
+node_modules/
+.DS_Store
+coverage
+test.html
+yarn-error.log
+.eslintcache
+

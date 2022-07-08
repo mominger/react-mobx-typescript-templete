@@ -1,0 +1,14 @@
+.home {
+  .container {
+    padding: 16px;
+
+    .title {
+      color: $color-red;
+    }
+
+    .login {
+      color: $color-red;
+      font-weight: 600;
+    }
+  }
+}

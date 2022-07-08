@@ -1,0 +1,3 @@
+interface HomeMessage {
+  msg: string;
+}
