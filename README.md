@@ -1,5 +1,5 @@
 # aaxpress-web-booking
-Pls check [Description of React18+Mobx based Web Architecture](https://github.com/mominger/blog/issues/40) to understand this project quickly.
+Pls check [Explain the web architecture based on React18+Mbox](https://github.com/mominger/blog/issues/40) to understand this project quickly.
 
 
 ## Project architecture diagram
