@@ -1,5 +1,5 @@
 # aaxpress-web-booking
-Pls check [Explain the web architecture based on React18+Mbox](https://github.com/mominger/blog/issues/40) to understand this project quickly.
+Pls check [Design a web architecture based on React18+Mobx](https://github.com/mominger/blog/issues/40) to understand this project quickly.
 
 
 ## Project architecture diagram
@@ -10,7 +10,7 @@ Pls check [Explain the web architecture based on React18+Mbox](https://github.co
 
 
 ## How to run the project
-1. install the dependences
+### 1. install the dependences
 `yarn` and `npm` are interchangeable
 
 ```sh
