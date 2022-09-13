@@ -10,4 +10,5 @@ coverage
 test.html
 yarn-error.log
 .eslintcache
+.npmrc
 
