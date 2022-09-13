@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react';
 import { Observer } from 'mobx-react-lite';
-import { useStore } from '@/helper/hooks';
+import { useStore } from '@/hooks';
 import { useNavigate } from 'react-router-dom';
 import { Page } from '@/components';
 

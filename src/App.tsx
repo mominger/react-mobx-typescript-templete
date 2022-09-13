@@ -7,7 +7,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import router from '@/router';
-import { useStore } from '@/helper/hooks';
+import { useStore } from '@/hooks';
 import { withError } from '@/components';
 import { ROUTE_URL } from '@/helper/constants';
 

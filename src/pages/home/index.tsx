@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react';
-import { useStore } from '@/helper/hooks';
+import { useStore } from '@/hooks';
 
 import { Page, Counter, Header } from '@/components';
 import { ROUTE_URL } from '@/helper/constants';

@@ -1,4 +1,4 @@
-import { useStore } from '@/helper/hooks';
+import { useStore } from '@/hooks';
 import './index.scss';
 
 function Header() {
