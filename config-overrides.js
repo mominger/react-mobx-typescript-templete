@@ -11,7 +11,10 @@ module.exports = override(
   }),
   adjustStyleLoaders((rule) => {
     if (rule.test.toString().includes('scss')) {
-      rule.use.push({
+      rule.use.push(
+        {
+          loader: path.resolve('./loaders/scss-module-loader/index.js')
+        },{
         loader: 'sass-resources-loader',
         options: {
           resources: [
