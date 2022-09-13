@@ -19,7 +19,7 @@ const Login = () => {
   return (
     <Observer>
       {() => (
-        <Page store={store} className="login">
+        <Page className="login">
           <div>
             <input
               type="text"

@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 import WebStore from './common/web';
 import HomeStore from './home';
-import UserStore from './user';
+import UserStore from './common/user';
 import { configure } from 'mobx';
 
 configure({
