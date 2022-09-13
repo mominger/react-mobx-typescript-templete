@@ -16,8 +16,6 @@ const Home = (props: IProps) => {
 
   return (
     <Page store={store} className="home">
-      <Header />
-
       <div className="container">
         <div className="title">Home</div>
         <Counter></Counter>
@@ -25,12 +23,8 @@ const Home = (props: IProps) => {
       <p>message: {store.message}</p>
 
       <div>
-        {userStore.isLogin ? (
+        {userStore.isLogin && (
           <p className="login">登录的账号名: {userStore.user.name}</p>
-        ) : (
-          <button onClick={() => navigate(ROUTE_URL.USER_LOGIN)}>
-            go to Login page
-          </button>
         )}
       </div>
       <br />

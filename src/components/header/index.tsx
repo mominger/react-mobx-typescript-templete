@@ -4,7 +4,7 @@ import './index.scss';
 function Header() {
   const { webStore } = useStore();
 
-  return <div>test header component</div>;
+  return <div>this is header component from layout </div>;
 }
 
 export default Header;

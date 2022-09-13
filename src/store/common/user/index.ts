@@ -1,11 +1,9 @@
 import { action, observable, makeObservable } from 'mobx';
 import { UserApi } from '@/api';
 import Storage from '@/helper/storage';
-import { KEY_LOCALE, LOCALE_CODE_DEFAULT } from '@/helper/constants';
+import { KEY_LOCALE, LOCALE_CODE_DEFAULT, KEY_USER } from '@/helper/constants';
 import i18n, { LOCALE_MAPPING } from '@/helper/i18n';
 import { getNavigatorLocale } from '@/helper/util';
-
-const USER_KEY = 'KEY_USER';
 
 export default class UserStore {
   @observable user: User = {};
@@ -54,6 +52,7 @@ export default class UserStore {
   @action
   init = () => {
     this.initLocale();
+    this.initUser();
   };
 
   @action
@@ -67,9 +66,24 @@ export default class UserStore {
   };
 
   @action
+  initUser = () => {
+    const user = Storage.getItem(KEY_USER);
+    if (user) {
+      this.isLogin = true;
+      this.user = user;
+    }
+  };
+
+  @action
   login = async () => {
     this.isLogin = true;
     //this.user = await UserApi.login<User>(this.user);
-    Storage.setItem(USER_KEY, this.user);
+    Storage.setItem(KEY_USER, this.user);
+  };
+
+  @action
+  logout = async () => {
+    this.isLogin = false;
+    Storage.removeItem(KEY_USER);
   };
 }

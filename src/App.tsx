@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import router from '@/router';
 import { useStore } from '@/hooks';
-import { withError } from '@/components';
+import { HeaderLayout, RequireAuth, withError } from '@/components';
 import { ROUTE_URL } from '@/helper/constants';
 
 import 'antd/dist/antd.min.css';
@@ -26,19 +26,29 @@ function App() {
       <Router>
         <Suspense fallback={FallbackComponent}>
           <Routes>
-            {router.routes.map((route) => {
-              return (
-                <Route
-                  path={route.path}
-                  element={<route.component />}
-                  key={route.path}
-                ></Route>
-              );
-            })}
-            <Route
-              path="*"
-              element={<Navigate to={ROUTE_URL.ROOT} replace />}
-            />
+            <Route element={<HeaderLayout />}>
+              {router.routes.map((route) => {
+                return (
+                  <Route
+                    path={route.path}
+                    element={
+                      route.isAuth === false ? (
+                        <route.component />
+                      ) : (
+                        <RequireAuth>
+                          <route.component />
+                        </RequireAuth>
+                      )
+                    }
+                    key={route.path}
+                  ></Route>
+                );
+              })}
+              <Route
+                path="*"
+                element={<Navigate to={ROUTE_URL.ROOT} replace />}
+              />
+            </Route>
           </Routes>
         </Suspense>
       </Router>

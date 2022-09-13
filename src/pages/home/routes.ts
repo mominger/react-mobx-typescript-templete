@@ -9,5 +9,6 @@ export default [
   {
     path: `${ROUTE_URL.ROOT}`,
     component: Home,
+    isAuth: false,
   },
 ];
